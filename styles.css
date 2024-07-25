@@ -6,9 +6,9 @@
     --background-color: #f4f4f4;
     --header-background: white;
     --header-text: #2980b9;
-    --header-scrolled-background: #3498db; /* Color azul para el header scrolled */
-    --header-scrolled-text: white; /* Color blanco para el texto del header scrolled */
-    --menu-text-color: #2980b9; /* Color azul para el texto del menú */
+    --header-scrolled-background: #3498db;
+    --header-scrolled-text: white;
+    --menu-text-color: #2980b9;
 }
 
 * {
@@ -56,7 +56,7 @@ header .container {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--header-text);
+    color: var(--header-text); 
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -85,7 +85,7 @@ header.scrolled .logo {
 }
 
 header.scrolled .main-nav ul li a {
-    color: var(--header-scrolled-background);
+    color: var(--header-scrolled-text);
 }
 
 .main-nav ul li a:hover {
@@ -300,10 +300,15 @@ header.scrolled .mobile-menu-icon {
     margin-bottom: 0.5em;
 }
 
-.pricing-card p {
-    font-size: 1.5em;
-    color: var(--accent-color);
-    margin-bottom: 1em;
+.pricing-card .price {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+.pricing-card .price span {
+    font-size: 0.5em;
+    color: var(--background-color);
 }
 
 .pricing-card ul {
@@ -340,6 +345,10 @@ header.scrolled .mobile-menu-icon {
     margin-top: 1em;
 }
 
+#mensual {
+    border: 2px solid var(--background-color);
+}
+
 .pricing-card .cta:hover {
     background: white;
     color: var(--primary-color);
@@ -362,6 +371,10 @@ header.scrolled .mobile-menu-icon {
     background: rgba(255, 255, 255, 0.2);
     transform: rotate(45deg);
     animation: shine 4s infinite;
+}
+
+.pricing-card.highlight .price {
+    color: white;
 }
 
 .pricing-card.highlight .cta {
@@ -413,7 +426,7 @@ header.scrolled .mobile-menu-icon {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2em;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--background-color);
     transition: background 0.3s, color 0.3s;
     animation: fadeInUp 1s;
 }
@@ -491,6 +504,10 @@ footer .social a {
     .main-nav ul li a {
         padding: 1em;
         border-bottom: 1px solid var(--background-color);
+    }
+
+    header.scrolled .main-nav ul li a {
+        color: var(--menu-text-color);
     }
 
     .mobile-menu-icon {
